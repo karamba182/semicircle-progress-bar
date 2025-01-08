@@ -1,7 +1,7 @@
 
 # Semicircle Progress Bar
 
-![npm](https://img.shields.io/npm/v/semicircle-progress-bar?style=flat-square)
+![npm](https://img.shields.io/npm/v/@Yurii-tokar/semicircle-progress-bar?style=flat-square)
 ![license](https://img.shields.io/github/license/karamba182/semicircle-progress-bar)
 ![issues](https://img.shields.io/github/issues/karamba182/semicircle-progress-bar)
 

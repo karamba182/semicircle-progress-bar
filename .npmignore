@@ -1,0 +1,38 @@
+# Ignore source files
+src/
+dist/App.css
+dist/App.js
+dist/App.test.js
+dist/index.css
+dist/logo.svg
+dist/setupTests.js
+
+# Node modules
+node_modules/
+
+# Test files
+*.test.js
+coverage/
+*.spec.js
+
+App.css
+logo.svg
+
+# Editor/IDE files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Build scripts and configs
+babel.config.js
+webpack.config.js
+rollup.config.js
+
+# Development-related files
+.env
+*.log
+*.tmp
+*.swp

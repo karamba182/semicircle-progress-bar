@@ -1,8 +1,11 @@
 import React from "react";
 
-const SemicircleProgressBar = ({ points }) => {
-  const minPoints = 300;
-  const maxPoints = 900;
+const SemicircleProgressBar = ({ 
+  points, 
+  minPoints = 300,  
+  maxPoints = 900,   
+  showPercentage = false 
+}) => {
   const clampedPoints = Math.min(Math.max(points, minPoints), maxPoints);
 
   const progressPercentage =
@@ -47,7 +50,10 @@ const SemicircleProgressBar = ({ points }) => {
 
       {/* Progress Bar text  */}
       <div style={styles.text}>
-        {clampedPoints} / {maxPoints}
+        {showPercentage 
+          ? `${Math.round(progressPercentage)}%`
+          : points
+        }
       </div>
     </div>
   );
@@ -69,8 +75,9 @@ const styles = {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    fontSize: "24px",
+    fontSize: "32px",
     fontWeight: "bold",
+    color: "#333",
   },
 };
 

@@ -1,6 +1,6 @@
 {
-  "name": "semicircle-progress-bar",
-  "version": "1.0.0",
+  "name": "@yurii_tokar/semicircle-progress-bar",
+  "version": "1.1.0",
   "description": "A customizable semicircular progress bar for React",
   "main": "dist/index.js",
   "files": [
@@ -13,6 +13,7 @@
     "type": "git",
     "url": "https://github.com/karamba182/semicircle-progress-bar.git"
   },
+  "homepage": "https://github.com/karamba182/semicircle-progress-bar",
   "keywords": [
     "react",
     "progress",

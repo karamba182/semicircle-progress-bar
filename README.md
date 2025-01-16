@@ -1,11 +1,10 @@
-
 # Semicircle Progress Bar
 
 ![npm](https://img.shields.io/npm/v/semicircle-progress-bar?style=flat-square)
 ![license](https://img.shields.io/github/license/karamba182/semicircle-progress-bar)
 ![issues](https://img.shields.io/github/issues/karamba182/semicircle-progress-bar)
 
-A customizable semicircular progress bar built for React.
+A customizable semicircular progress bar for React, allowing you to display progress based on points with enhanced features like percentage display and customizable min/max values.
 
 ## Features
 
@@ -15,12 +14,38 @@ A customizable semicircular progress bar built for React.
 
 ---
 
+## What’s New
+
+### Version 1.1.0
+
+This version introduces the following enhancements:
+
+1. #### Dynamic Props for minPoints and maxPoints
+   You can now customize the minimum and maximum points directly through props:
+
+```bash
+<SemicircleProgressBar points={450} minPoints={200} maxPoints={800} />
+```
+
+2. #### Percentage Display (showPercentage)
+   Added a new optional prop showPercentage. When set to true, the progress bar will display the percentage instead of raw points:
+
+```bash
+<SemicircleProgressBar points={600} showPercentage={true} />
+```
+
+3. #### Improved Styling
+   • Font size for the displayed value has been increased for better readability.
+   • Text color is now set to #333 for better contrast.
+
+---
+
 ## Installation
 
 Install the package via NPM:
 
 ```bash
-npm install semicircle-progress-bar
+npm install @yurii_tokar/semicircle-progress-bar
 ```
 
 ---
@@ -29,15 +54,33 @@ npm install semicircle-progress-bar
 
 Here’s how you can use the component in your React project:
 
-```javascript
+### Basic Example
+
+```jsx
 import React from "react";
-import SemicircleProgressBar from "semicircle-progress-bar";
-import "semicircle-progress-bar/styles.css"; // Import styles
+import SemicircleProgressBar from "@yurii_tokar/semicircle-progress-bar";
+
+const App = () => {
+  return <SemicircleProgressBar points={500} />;
+};
+
+export default App;
+```
+
+### Advanced Example
+
+```jsx
+import React from "react";
+import SemicircleProgressBar from "@yurii_tokar/semicircle-progress-bar";
 
 const App = () => {
   return (
     <div>
-      <SemicircleProgressBar points={500} />
+      {/* Example with customized min/max points */}
+      <SemicircleProgressBar points={700} minPoints={400} maxPoints={1000} />
+
+      {/* Example with percentage display */}
+      <SemicircleProgressBar points={600} showPercentage={true} />
     </div>
   );
 };
@@ -49,9 +92,19 @@ export default App;
 
 ## Props
 
-| Prop   | Type   | Default | Description                                     |
-|--------|--------|---------|-------------------------------------------------|
-| points | Number | `300`   | Current progress value (from 300 to 900).       |
+| Prop   | Type   | Default | Description                             |
+| ------ | ------ | ------- | --------------------------------------- |
+| points | Number | `75`    | Current progress value (from 0 to 100). |
+
+---
+
+## Changelog
+
+### v1.1.0
+
+    •	Added props for minPoints and maxPoints.
+    •	Introduced showPercentage prop for percentage display.
+    •	Improved styling for better readability.
 
 ---
 
@@ -74,4 +127,3 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 ## Support
 
 If you encounter any issues or have feature requests, feel free to open an issue [here](https://github.com/karamba182/semicircle-progress-bar/issues).
-
